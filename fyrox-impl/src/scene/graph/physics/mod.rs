@@ -1076,7 +1076,7 @@ impl<'a> QueryFilter<'a> {
                 .and_then(|h| graph.try_get_of_type::<collider::Collider>(h).ok())
                 .map(|c| c.native.get()),
             exclude_rigid_body: self
-                .exclude_collider
+                .exclude_rigid_body
                 .and_then(|h| graph.try_get_of_type::<rigidbody::RigidBody>(h).ok())
                 .map(|c| c.native.get()),
             predicate: Some(predicate),
